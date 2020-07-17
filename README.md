@@ -13,10 +13,10 @@ All the logic and the design of the widget is provided here for testing and work
 Entry point is index.html file. Setup variables in:
 
 ```
-	<script>
-		var encrypted_data = ''; // result of getEncryptedData() method from Challenger API
-		var challengerServer = '' // URL to the Challenger server. I.e. https://demo.challengerplatform.com
-	</script>
+<script>
+	var encrypted_data = ''; // result of getEncryptedData() method from Challenger API
+	var challengerServer = '' // URL to the Challenger server. I.e. https://demo.challengerplatform.com
+</script>
 ```
 
 ## API
