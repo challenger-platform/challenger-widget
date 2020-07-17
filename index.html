@@ -4,11 +4,12 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="widget.css">
 	</head>
+
 	<body id="widgetApp">
-		<img src="images/logo-color.png" alt="" style="height: 37px;" />
+		<img src="images/logo-color.png" alt="" style="width: 150px;" />
 
 		<div class="show-on-load registered-user">
-			<div class="slide">
+			<div id="intro-block" class="slide">
 				<div id="intro-text">
 					Hello <span class="user-name"></span>
 				</div>
@@ -16,9 +17,9 @@
 				<div id="points-block"></div>
 			</div>
 
-			<div id="available-challenges-block" style="display: none;"></div>
+			<div id="available-challenges-block" class="slide" style="display: none;"></div>
 
-			<div id="not-collected-points-block" style="display: none;"></div>
+			<div id="not-collected-points-block" class="slide" style="display: none;"></div>
 		</div>
 
 		<div class="show-on-load unregistered-user">
@@ -37,7 +38,7 @@
 	</body>
 
 	<script>
-		var encrypted_data = ''; // result of getEncryptedData() method from Challenger API
+		var encrypted_data = '' // result of getEncryptedData() method from Challenger API
 		var challengerServer = '' // URL to the Challenger server. I.e. https://demo.challengerplatform.com
 	</script>
 

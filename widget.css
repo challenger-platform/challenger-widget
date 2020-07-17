@@ -1,9 +1,5 @@
-@import (css) url('https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin-ext');
-
-@link-color: #7abf43;
-
 body{
-	font-family: Roboto, sans-serif;
+	font-family: sans-serif;
 	height: 148px;
 	width: 300px;
 	margin: 0px;
