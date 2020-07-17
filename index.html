@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="widget.css">
+	</head>
+	<body id="widgetApp">
+		<img src="images/logo-color.png" alt="" style="height: 37px;" />
+
+		<div class="show-on-load registered-user">
+			<div class="slide">
+				<div id="intro-text">
+					Hello
+					@if (!empty($user['user_name']))
+						{{$user['user_name']}}
+					@elseif ($params && !emptY($params['name']))
+						{{$params['name']}}
+					@endif
+				</div>
+
+				<div id="points-block"></div>
+			</div>
+
+			<div id="available-challenges-block" style="display: none;"></div>
+
+			<div id="not-collected-points-block" style="display: none;"></div>
+		</div>
+
+		<div class="show-on-load unregistered-user">
+			<div id="intro-text-no-user">
+				<div>
+					Join the Challenger program!<br>
+
+					<div>
+						<button id="button-sign-up">
+							Begin!
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		var encrypted_data = '{* result of getEncryptedData() function *}';
+		var challengerServer = 'http://aimera.local'
+		document.domain = "aimera.local"
+	</script>
+	<script src="lib/jquery.js"></script>
+	<script src="widget.js"></script>
+</html>
