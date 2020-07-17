@@ -6,11 +6,11 @@ All the logic and the design of the widget is provided here for testing and work
 
 ## Deployment
 1. Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
-2. Assign the returned value to `var encrypted_data` JS variable in index.html file.
-3. Define challenger domain where API calls will be addressed `var challengerServer` in index.html file.
+2. Assign the returned value to `var encrypted_data` JS variable in widget.html file.
+3. Define challenger domain where API calls will be addressed `var challengerServer` in widget.html file.
 
 ## Usage
-Entry point is index.html file. Setup variables in:
+Entry point is widget.html file. Setup variables in:
 
 ```
 <script>
