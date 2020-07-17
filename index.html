@@ -10,12 +10,7 @@
 		<div class="show-on-load registered-user">
 			<div class="slide">
 				<div id="intro-text">
-					Hello
-					@if (!empty($user['user_name']))
-						{{$user['user_name']}}
-					@elseif ($params && !emptY($params['name']))
-						{{$params['name']}}
-					@endif
+					Hello <span class="user-name"></span>
 				</div>
 
 				<div id="points-block"></div>
@@ -42,8 +37,8 @@
 	</body>
 
 	<script>
-		var encrypted_data = '{* result of getEncryptedData() function *}';
-		var challengerServer = 'https://demo.challengerplatform.com'
+		var encrypted_data = ''; // result of getEncryptedData() method from Challenger API
+		var challengerServer = '' // URL to the Challenger server. I.e. https://demo.challengerplatform.com
 	</script>
 
 	<script src="lib/jquery.js"></script>
