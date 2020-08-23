@@ -10,29 +10,41 @@ function transformChallengeName(value){
 	else return 'challenges'; // *5-*0
 }
 
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1)
+  var sURLVariables = sPageURL.split('&')
+
+  for (var i = 0; i < sURLVariables.length; i++) {
+    var sParameterName = sURLVariables[i].split('=')
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+    }
+  }
+}
+
+var challengerEncryptedData = getUrlParameter("encrypted_data")
+var challengerServer = "https://" + getUrlParameter("host")
+
 var widget = {
-	slidesCount: $('.slide').length, // Count sliding panes
+	slidesCount: $(".slide").length, // Count sliding panes
 	currentSlide: 0,
 	user: {},
 
 	init: function () {
 		// Try to authenticate user first
-		$.get(challengerServer + "/api/widget/authenticateUser?data=" + encodeURIComponent(encrypted_data), (data) => {
-			if(data.status == 'error'){
+		$.get(challengerServer + "/api/widget/authenticateUser?data=" + encodeURIComponent(challengerEncryptedData), (data) => {
+			if(data.status == "error"){
 				widget.showUnregistered()
 				return;
 			}
 
 			widget.user = data.user
 
-			$('.user-name').text(widget.user.user_name)
-			$('#intro-block').show() // Open first slide
+			$(".user-name").text(widget.user.user_name)
+			$("#intro-block").show() // Open first slide
 
 			widget.showRegistered()
-
-
-			// widget.loadData()
-
 		}).fail(function( jqXHR, textStatus, errorThrown ) {
 			if(jqXHR.status == 401){ // User is now authorized, so we assume he is not registered
 				widget.showUnregistered()
@@ -85,6 +97,6 @@ $(document).ready(function(){
 	widget.init()
 
 	$('#widgetApp').click(function () {
-	  window.open(challengerServer + '/login-user-by-external-id?encrypted_data=' + encrypted_data, 'challenger')
+	  window.open(challengerServer + '/login-user-by-external-id?encrypted_data=' + challengerEncryptedData, 'challenger')
 	})
 })
