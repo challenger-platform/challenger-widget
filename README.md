@@ -8,7 +8,8 @@ All the logic and the design of the widget is provided here for testing and work
 1. Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
 2. Set up iFrame in the HTML for the widget: 
 ```
-<iframe src="widget.html?encrypted_data=replace-this-value&host=demo.challengerplatform.com" width="322" height="170" style="border:none;"></iframe>
+<iframe src="widget.html?encrypted_data=replace-this-value&host=demo.challengerplatform.com"
+   width="322" height="170" style="border:none;"></iframe>
 ```
 where `encrypted_data` is a result of getEncryptedData() method from Challenger API and `host` is hostname of Challenger deployment.
 
