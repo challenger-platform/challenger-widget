@@ -4,7 +4,7 @@ This example shows how to implement Challenger widget on client side. Widget's H
 ## Important!
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**. 
 
-## Deployment
+## Usage
 1. Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
 2. Set up iFrame in the HTML for the widget: 
 ```
