@@ -96,7 +96,12 @@ var widget = {
 $(document).ready(function(){
 	widget.init()
 
-	$('#widgetApp').click(function () {
-	  window.open(challengerServer + '/login-user-by-external-id?encrypted_data=' + challengerEncryptedData, 'challenger')
+	$('#buttonShowPrizes').click(function (event) {
+		 event.stopPropagation();
+		 window.open(challengerServer + '/login-user-by-external-id?encrypted_data=' + encodeURIComponent(challengerEncryptedData) + '&redirect_path=prizes', 'challenger')
+	})
+
+	$('body').click(function () {
+	  window.open(challengerServer + '/login-user-by-external-id?encrypted_data=' + encodeURIComponent(challengerEncryptedData), 'challenger')
 	})
 })
