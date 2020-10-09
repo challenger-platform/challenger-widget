@@ -31,8 +31,8 @@ Returns: number of points not collected yet by user. Returns result only if `aut
 ### GET `/api/widget/getUserChallengesQuantity`
 Returns: number of challenges currently available for the user. Returns result only if `authenticateUser` passes successfully.
 
-## Opening Challenger
+## Opening Challenger dashboard
 ### GET `/login-user-by-external-id`
 Params:
 * data - result of API lib's `getEncryptedData()` method.
-* redirect_path - (optional) the path where user should be redirected after successful login. Example: "prizes/1/1"
+* redirect_path - (optional) the path where user should be redirected after successful login. If not set the user will be redirected to dashboard. Example: "prizes/1/1"
