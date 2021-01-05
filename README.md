@@ -20,16 +20,9 @@ Internally this code uses methods:
 Params:
 * data - result of API lib's `getEncryptedData()` method.
 
-Returns: JSON array with `status = ok` and `user` parameters containing user information. Or `status = error` if user does not exist.
+Returns: JSON array with `status: ok` and `user: {}` parameters containing user information. Or `status = error` if user does not exist.
 
-### GET `/api/widget/getUserPoints`
-Returns: number of points collected by the user. Returns result only if `authenticateUser` passes successfully.
-
-### GET `/api/widget/getUserNotCollectedPoints`
-Returns: number of points not collected yet by user. Returns result only if `authenticateUser` passes successfully.
-
-### GET `/api/widget/getUserChallengesQuantity`
-Returns: number of challenges currently available for the user. Returns result only if `authenticateUser` passes successfully.
+> **NB**: in customized versions this method could take additional parameters and return additional information. Please refer to specific deployment documentation.
 
 ## Opening Challenger dashboard
 ### GET `/login-user-by-external-id`
