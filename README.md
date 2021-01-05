@@ -5,13 +5,7 @@ This example shows how to implement Challenger widget on client side. Widget's H
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
 
 ## Usage
-1. Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
-2. Set up iFrame in the HTML for the widget. For example:
-```
-<iframe src="widget.html?data={{getEncryptedData value}}&host={{your-challenger-domain.com}}"
-   width="322" height="170" style="border:none;"></iframe>
-```
-where `data` is a result of getEncryptedData() method from Challenger API and `host` is hostname of Challenger deployment.
+Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
 
 ## API
 Internally this code uses methods:
@@ -29,3 +23,14 @@ Returns: JSON array with `status: ok` and `user: {}` parameters containing user 
 Params:
 * data - result of API lib's `getEncryptedData()` method.
 * redirect_path - (optional) the path where user should be redirected after successful login. If not set the user will be redirected to dashboard. Example: "prizes/1/1"
+
+## Demo example
+
+To use predefined HTML example, feel free to load HTML for the widget. For example:
+```
+https://localhost/widget.html?data=...&host=...
+```
+
+where `data` is a result of getEncryptedData() method from Challenger API and `host` is hostname of Challenger deployment.
+
+> This is just a suggested option. In your specific use case you may use API calls below in any preferable way.
