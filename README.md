@@ -8,8 +8,6 @@ All the logic and the design of the widget is provided here for testing and work
 Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
 
 ## API
-Internally this code uses methods:
-
 ### GET `/api/widget/authenticateUser`
 Params:
 * data - result of API lib's `getEncryptedData()` method.
