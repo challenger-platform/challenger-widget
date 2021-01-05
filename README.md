@@ -1,5 +1,5 @@
 # Challenger static widget example
-This example shows how to implement Challenger widget on client side. Widget's HTML could be loaded statically and use API calls to Challenger server to display client progress and other data.
+This example shows how to implement Challenger widget on client side. Widget's HTML could be used statically and make API calls to Challenger server to display client progress and other data.
 
 ## Important!
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
