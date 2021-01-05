@@ -6,9 +6,9 @@ All the logic and the design of the widget is provided here for testing and work
 
 ## Usage
 1. Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
-2. Set up iFrame in the HTML for the widget:
+2. Set up iFrame in the HTML for the widget. For example:
 ```
-<iframe src="widget.html?data=replace-this-value&host=demo.challengerplatform.com"
+<iframe src="widget.html?data={{getEncryptedData value}}&host={{your-challenger-domain.com}}"
    width="322" height="170" style="border:none;"></iframe>
 ```
 where `data` is a result of getEncryptedData() method from Challenger API and `host` is hostname of Challenger deployment.
