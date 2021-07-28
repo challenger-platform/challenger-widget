@@ -5,7 +5,7 @@ This example shows how to implement Challenger widget on client side. Widget's H
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
 
 ## Usage
-Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php), [Java](https://github.com/challenger-platform/challenger-api-client-java), [C#](https://github.com/challenger-platform/challenger-api-client-csharp)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
+Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php#performance-widgets), [Java](https://github.com/challenger-platform/challenger-api-client-java#performance-widgets), [C#](https://github.com/challenger-platform/challenger-api-client-csharp#performance-widgets)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
 
 ## API
 ### GET `/api/widget/authenticateUser`
