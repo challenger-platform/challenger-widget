@@ -1,5 +1,5 @@
 # Challenger static widget example
-This example shows how to implement Challenger widget on client side. Widget's HTML could be used statically and make API calls to Challenger server to display client progress and other data.
+This example shows how to implement Challenger widget on the client side. Widget's HTML could be used statically and make API calls to the Challenger server and receive client progress and other data.
 
 ## Important!
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
@@ -17,7 +17,7 @@ Returns: JSON array with `status: ok` and `user: {}` parameters containing user 
 > **NB**: in customized versions this method could take additional parameters and return additional information. Please refer to specific deployment documentation.
 
 ## Opening Challenger dashboard
-### GET `/login-user-by-external-id`
+### GET `/loginUserByExternalId`
 Params:
 * data - result of API lib's `getEncryptedData()` method.
 * redirect_path - (optional) the path where user should be redirected after successful login. If not set the user will be redirected to dashboard. Example: "prizes/1/1"
