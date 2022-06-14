@@ -64,10 +64,10 @@ $(document).ready(function(){
 
 	$('#buttonShowPrizes').click(function (event) {
 		 event.stopPropagation();
-		 window.open(challengerServer + '/login-user-by-external-id?data=' + encodeURIComponent(challengerEncryptedData) + '&redirect_path=prizes', 'challenger')
+		 window.open(challengerServer + '/loginUserByExternalId?data=' + encodeURIComponent(challengerEncryptedData) + '&redirect_path=prizes', 'challenger')
 	})
 
 	$('body').click(function () {
-		window.open(challengerServer + '/login-user-by-external-id?data=' + encodeURIComponent(challengerEncryptedData), 'challenger')
+		window.open(challengerServer + '/loginUserByExternalId?data=' + encodeURIComponent(challengerEncryptedData), 'challenger')
 	})
 })
