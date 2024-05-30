@@ -1,5 +1,5 @@
 # Challenger static widget example
-This example shows how to implement Challenger widget on the client side. Widget's HTML could be used statically and make API calls to the Challenger server and receive client progress and other data.
+This example shows how to implement Challenger widget on the client side. The widget could be built to display user data in a mobile app natively rather than using WebView. For this purpose the Challenger API is used to request raw user data from the server.
 
 ## Important!
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
@@ -8,6 +8,9 @@ All the logic and the design of the widget is provided here for testing and work
 Please use Challenger API ([PHP](https://github.com/challenger-platform/challenger-api-client-php#performance-widgets), [Java](https://github.com/challenger-platform/challenger-api-client-java#performance-widgets), [C#](https://github.com/challenger-platform/challenger-api-client-csharp#performance-widgets)) manuals to get secure user payload string with `getEncryptedData()` (instead `getWidgetHtml()`) method.
 
 ## API
+
+Authenticate and get information about the user. It could be used to indicate user performance in a native widget of a mobile app or other channels.
+
 ### GET `/api/widget/authenticateUser`
 Params:
 * data - result of API lib's `getEncryptedData()` method.
