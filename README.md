@@ -20,6 +20,9 @@ Returns: JSON array with `status: ok` and `user: {}` parameters containing user 
 > **NB**: in customized versions this method could take additional parameters and return additional information. Please refer to specific deployment documentation.
 
 ## Opening Challenger dashboard
+
+This method could be used to open both an external browser or a WebView within the mobile application.
+
 ### GET `/loginUserByExternalId`
 Params:
 * data - result of API lib's `getEncryptedData()` method.
