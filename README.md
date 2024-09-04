@@ -1,5 +1,5 @@
-# Challenger static widget example
-This example shows how to implement Challenger widget on the client side. The widget could be built to display user data in a mobile app natively rather than using WebView. For this purpose the Challenger API is used to request raw user data from the server.
+# Challenger custom widget example
+This example shows how to implement Challenger widget on the client side. The widget could be built to display user data in a mobile app natively instead of a WebView. It also helps to fetch and process user data in other environments (for example back-end systems) where it is impossible or inconvenient to display a Challenger generated widget HTML. For this purpose the Challenger API is used to request raw user data from the server.
 
 ## Important!
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
@@ -17,7 +17,7 @@ Params:
 
 Returns: JSON array with `status: ok` and `user: {}` parameters containing user information. Or `status: error` if requested user does not exist.
 
-> **NB**: in customized versions this method could take additional parameters and return additional information. Please refer to specific deployment documentation.
+> **NB**: This method could take additional parameters and return additional information in custom deployments. Please refer to documentation of the specific deployment.
 
 ## Opening Challenger dashboard
 
