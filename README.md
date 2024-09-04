@@ -17,6 +17,26 @@ Params:
 
 Returns: JSON array with `status: ok` and `user: {}` parameters containing user information. Or `status: error` if requested user does not exist.
 
+### An example of the response
+```json
+{
+	"status": "ok",
+	"user": {
+		"user_id": "123",
+		"user_external_id": "789456123",
+		"user_name": "John",
+		"user_surname": "Travolta",
+		"user_gender": "male",
+		"user_birthday": "2000-01-01",
+		"user_image_id": "12",
+		"user_picture_url": "https://...",
+		"user_lang": "en",
+		"user_is_in_monthly_top": 1,
+		"user_initialized": 1,
+	}
+}
+```
+
 > **NB**: This method could take additional parameters and return additional information in custom deployments. Please refer to documentation of the specific deployment.
 
 ## Opening Challenger dashboard
