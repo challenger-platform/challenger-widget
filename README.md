@@ -1,5 +1,5 @@
 # Challenger custom widget example
-This example shows how to implement Challenger widget on the client side. The widget could be built to display user data in a mobile app natively instead of a WebView. It also helps to fetch and process user data in other environments (for example back-end systems) where it is impossible or inconvenient to display a Challenger generated widget HTML. For this purpose the Challenger API is used to request raw user data from the server.
+This example shows how to implement Challenger widget on the client side. The widget could be built to display user data in a mobile, desktop, ATM app natively and stateless instead of a WebView. It also helps to fetch and process user data in other environments (for example back-end systems) where it is impossible or inconvenient to use a Challenger generated session driven widget iFrame. For this purpose the Challenger API is used to request raw user data from the server.greitai
 
 ## Important!
 All the logic and the design of the widget is provided here for testing and workflow demonstration purposes. **Production ready design and layout is implemented according business demands**.
@@ -37,7 +37,7 @@ Returns: JSON array with `status: ok` and `user: {}` parameters containing user 
 }
 ```
 
-> **NB**: This method could take additional parameters and return additional information in custom deployments. Please refer to documentation of the specific deployment.
+> **NB**: This method could take additional parameters and return additional information in custom deployments. This augmented data, if exists, is not covered here.
 
 ## Opening Challenger dashboard
 
@@ -50,11 +50,11 @@ Params:
 
 ## Demo example
 
-To use predefined HTML example, feel free to load HTML for the widget. For example:
+To use predefined HTML example, feel free to load [widget.html](widget.html) in your browser. For example:
 ```
 https://localhost/widget.html?data=...&host=...
 ```
 
 where `data` is a result of getEncryptedData() method from Challenger API and `host` is hostname of Challenger deployment.
 
-> This is just a suggested option. In your specific use case you may use API calls below in any preferable way.
+> This is just a suggested option. In your specific use case you may use API calls above in any preferable way.
